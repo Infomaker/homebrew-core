@@ -1,4 +1,4 @@
-class Occli < Formula
+class Oc < Formula
   desc "Open Content CLI"
   homepage "https://bitbucket.org/infomaker/opencontent-cli/"
   url "https://infomaker-public-artifacts.s3-eu-west-1.amazonaws.com/oc/darwin/oc-0.0.1.zip"
