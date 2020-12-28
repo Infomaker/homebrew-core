@@ -2,16 +2,16 @@
 class Occonf < Formula
   desc ""
   homepage ""
-  version "0.1.3"
+  version "0.1.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/v0.1.3/occonf_darwin_amd64.zip"
-    sha256 "71d9abb765ef6fc2f85574b829996a355928b88c7c98b1cacc8ade1fb2ee4726"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.1.4/occonf_darwin_amd64.zip"
+    sha256 "699445d1000c6409f5206a32c03f161bc735592360d81ed1c6f3780b6ccda12f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/v0.1.3/occonf_linux_amd64.zip"
-    sha256 "c3b37436104fff39092bb0e64bba9bdf17d4759c9789ea169f62f1f98aeeb5a1"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.1.4/occonf_linux_amd64.zip"
+    sha256 "3d7c9756cd635cf134ec00a2dafb6794dd050ef6ee6320dc4d1eb8fc89ccb5b8"
   end
 
   def install
