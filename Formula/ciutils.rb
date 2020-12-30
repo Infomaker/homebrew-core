@@ -2,16 +2,16 @@
 class Ciutils < Formula
   desc ""
   homepage ""
-  version "0.2.1"
+  version "0.2.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.2.1/ciutils_darwin_amd64.tar.gz"
-    sha256 "b5049eaddc211b08a79981fff2456f0af90e78cb72a5cd20cbacc3f6fabdaf86"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.2.2/ciutils_darwin_amd64.tar.gz"
+    sha256 "f2df24e4d869d71bd8fdedd1911c1c4874d7a865e104d72be74cb59d88e06a60"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.2.1/ciutils_linux_amd64.tar.gz"
-    sha256 "c0aa3e73d122b1189846663937641046133d11b1b3a241c0c8ccd20a2ba8f6a3"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.2.2/ciutils_linux_amd64.tar.gz"
+    sha256 "57491b9880cb507436add656d024af81332e4f31f898e3934d6285188055ecab"
   end
 
   def install
