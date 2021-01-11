@@ -7,11 +7,11 @@ class DocCli < Formula
 
   if OS.mac?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.1.0/doc-cli_macOS_64-bit.zip"
-    sha256 "249b679f32a71af4bc88feb38ff559a9ceaa367bb6390e315d278da2553928d7"
+    sha256 "6eab507595ced1eb3f044b57b1b2bdf496fa1ee5b479420f52c655c7dd6baf68"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.1.0/doc-cli_Tux_64-bit.zip"
-    sha256 "57adcf5b0160042e4c05f780be7502f86588e98b9fedefa7231d0fa3e237fc13"
+    sha256 "86f04902431735f9cf702cbcc0663491f6a6a854c6f642f0089e03442490559c"
   end
 
   def install
