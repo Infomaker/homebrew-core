@@ -1,4 +1,7 @@
-# Infomaker Core
+# Homebrew
+
+Tools:
+  * [oc](https://bitbucket.org/infomaker/opencontent-cli) - tool to extract OC properties from XML files.
 
 ## How do I install these formulae?
 `brew install infomaker/core/<formula>`
