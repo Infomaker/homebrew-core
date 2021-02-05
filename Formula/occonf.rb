@@ -2,16 +2,16 @@
 class Occonf < Formula
   desc "Merges and validates Open Content configuration files."
   homepage "https://bitbucket.org/infomaker/occonf/"
-  version "0.2.1"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/occonf_darwin_amd64.zip"
-    sha256 "dedcc1625ccd05af84d6fce0bc0e5cf9eb55235de5148fdbc70f6ef4520f89df"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.3.0/occonf_darwin_amd64.zip"
+    sha256 "c5951bfb72e1d6c0a07f2f2ef7841ab14fa0e2b64fa254f8df784cf9f746cab6"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/occonf_linux_amd64.zip"
-    sha256 "47c4dc523e957a00331d75756d81d48c419751633e1130f500c412efbff380ac"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.3.0/occonf_linux_amd64.zip"
+    sha256 "026288e0754c11e57739ec03e2ea631bab6a2bf8f9e263b584f16c3b09c0edb1"
   end
 
   def install
