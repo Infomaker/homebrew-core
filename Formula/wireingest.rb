@@ -2,16 +2,16 @@
 class Wireingest < Formula
   desc "Administrative tool for wire ingest config."
   homepage "https://bitbucket.org/infomaker/wireingest/"
-  version "0.1.3"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/wireingest/0.1.3/wireingest_darwin_amd64.zip"
-    sha256 "ad25c30305d7aa8e2bc86f3b5168b45457644b28768c87ca1d454d378f580534"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/wireingest/0.2.0/wireingest_darwin_amd64.zip"
+    sha256 "9902cf9ac880999a7af69566f1ccf6fa3971f8a17359a856a833c11349e22e56"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/wireingest/0.1.3/wireingest_linux_amd64.zip"
-    sha256 "7ae3e352cd6bc42ab6f6c454cd4f3f2ed576414317faf8b314b2e2953de47b62"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/wireingest/0.2.0/wireingest_linux_amd64.zip"
+    sha256 "9445c536aedd3a23f75154461763bc278b6b86bfefe2ee443bef4016c37b35f0"
   end
 
   def install
