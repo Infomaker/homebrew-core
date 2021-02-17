@@ -2,16 +2,16 @@
 class Ciutils < Formula
   desc "Common CI workflows"
   homepage "https://bitbucket.org/infomaker/ciutils/"
-  version "0.3.3"
+  version "0.3.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.3.3/ciutils_darwin_amd64.tar.gz"
-    sha256 "766a7bb41e899afe79245b7c704b4c34fab6b671a2a59e66e0874b0719f7c966"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.3.4/ciutils_darwin_amd64.tar.gz"
+    sha256 "cbfcbebee4bd1a6739088a81a22b951990b6da01ead7bbf4f078ed2e3f583eb8"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.3.3/ciutils_linux_amd64.tar.gz"
-    sha256 "1930e490c0fc54ef0df5973cd0c3fda58ae4a4d1172f7d70d8826096acb1465e"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.3.4/ciutils_linux_amd64.tar.gz"
+    sha256 "872399439f9e7f2c64d70b056213cd8368c46b8bcffbc9ceeb33cfa20254b3a6"
   end
 
   def install
