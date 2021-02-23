@@ -2,22 +2,19 @@
 class DocCli < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.1.1/doc-cli_macOS_64-bit.zip"
-    sha256 "34312b0a4a4db424b7f9ba80e40bc41e8143d4f528c13c19f57a340a0036fed6"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.1.2/doc-cli_macOS_64-bit.zip"
+    sha256 "3843de8c51f420054ad80f8b5cca270cca50c5449517dcceaa5d2083d477aada"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.1.1/doc-cli_Tux_64-bit.zip"
-    sha256 "f1f63b771064257a2cc53d19a25a24a75d18d405e9bb9e00df0e383221608801"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.1.2/doc-cli_Tux_64-bit.zip"
+    sha256 "ca834b7e585f15e82c47151a74c9c592e555e219cb7cc617a66452c71fd5b364"
   end
 
   def install
-    bin.install "mime-check"
-    bin.install "uuid-check"
-    bin.install "transform-check"
-    bin.install "oc2kafka"
+    bin.install "doc-cli"
   end
 end
