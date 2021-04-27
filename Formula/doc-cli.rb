@@ -2,16 +2,16 @@
 class DocCli < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.1.2"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.1.2/doc-cli_macOS_64-bit.zip"
-    sha256 "3843de8c51f420054ad80f8b5cca270cca50c5449517dcceaa5d2083d477aada"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.2.0/doc-cli_macOS_64-bit.zip"
+    sha256 "2f6993a284bc3d195a38ce9962db6a9fc273e4d18a743b736f9350dd7589dfe5"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.1.2/doc-cli_Tux_64-bit.zip"
-    sha256 "ca834b7e585f15e82c47151a74c9c592e555e219cb7cc617a66452c71fd5b364"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.2.0/doc-cli_Tux_64-bit.zip"
+    sha256 "00c0233fbaaec532367157633cceb15d5e5892fcdb52fa346ce1ace786bd2ef0"
   end
 
   def install
