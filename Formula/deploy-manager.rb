@@ -2,16 +2,16 @@
 class DeployManager < Formula
   desc "Utility that helps with deploy and setup of SaaS services"
   homepage "https://bitbucket.org/infomaker/deploy-manager/"
-  version "0.1.2"
+  version "0.1.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/deploy-manager/0.1.2/deploy-manager_darwin_amd64.zip"
-    sha256 "c59dfc117af93925abaa993e3454ee9097a0d9b856215050033a75f70cba24ef"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/deploy-manager/0.1.3/deploy-manager_darwin_amd64.zip"
+    sha256 "ebdb0c49ef2539f7e8ddad3ebebaad0b562222478c62b084b26a7e66a1c9126d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/deploy-manager/0.1.2/deploy-manager_linux_amd64.zip"
-    sha256 "a8c84bf2b6ff4ef6920b2b5c0607050582649896cf8f07530c869e743306f3a0"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/deploy-manager/0.1.3/deploy-manager_linux_amd64.zip"
+    sha256 "5ca86bbbcd3d49af5048e57b55bec4f4481709950074ae6dc0e98cf5026ddea8"
   end
 
   def install
