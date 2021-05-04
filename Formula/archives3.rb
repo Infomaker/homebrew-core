@@ -5,24 +5,24 @@
 class Archives3 < Formula
   desc "Archive S3 is a POC for creating backup archives from a bucket."
   homepage "https://bitbucket.org/infomaker/archives3/"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.1.0/archives3_darwin_amd64.zip"
-    sha256 "18dcfcd2b730a323453cdc05f00fe4ba33c0bf2324b0228d4e5c7a7382c5e218"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.1.1/archives3_darwin_amd64.zip"
+    sha256 "81d5c9833f834d5ea46559820f252f5dd705a9ae75033f6c8a8726c229a765a3"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.1.0/archives3_darwin_arm64.zip"
-    sha256 "0df8414537ce6d0cc0cb2ad7a0bf47576579903f2fc1915933d01f9d0e55bc51"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.1.1/archives3_darwin_arm64.zip"
+    sha256 "a201a37627b74b19e292a6492d8a3f747acd5b4dcf24ca83167b7eca458da88a"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.1.0/archives3_linux_amd64.zip"
-    sha256 "a6178bb2750b85a081258808c66b319aeffdc1d54c405ec17398ad96da939947"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.1.1/archives3_linux_amd64.zip"
+    sha256 "640e8eb867e9de10b1c486cbdd5ce8e3c223bb30d4beebb9165b9eadc1050447"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.1.0/archives3_linux_arm64.zip"
-    sha256 "aec5baca198d529f4212a3a64df1f9ab2adb3b2e51809be4dd9980de495469a1"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.1.1/archives3_linux_arm64.zip"
+    sha256 "3aa8de41a225fa0cf0dfab0a57fe17879bfdbeb273624e7733a0d3c421c5103d"
   end
 
   def install
