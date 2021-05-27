@@ -10,19 +10,19 @@ class DocCli < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.3.0/doc-cli_macOS_64-bit.zip"
-    sha256 "d18d01c7b90a366ea62138a6d9a76f43339a9de0e81e66c5ef1a4d6c9e48c3d1"
+    sha256 "5373a34ee15fe41c5ce7d373a17cd003cedebb1a67b9f650bb6284439d6af305"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.3.0/doc-cli_macOS_arm64.zip"
-    sha256 "d6ade886f35220d2688b6a74f7d26530fb34989c2ca6120838d364c1f767f248"
+    sha256 "8ed64f07747f42f4bbe90decb3cf6fd0405c10bc063d8000a95276339c44c11f"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.3.0/doc-cli_Tux_64-bit.zip"
-    sha256 "ffd34540eb613f4243fd41372172030b44614f7086302be608fa95ae0780accb"
+    sha256 "dfb95c93558602f62fde5b65890f2f8cb6ef030a447f84ef3c1faf90957bdd8f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.3.0/doc-cli_Tux_arm64.zip"
-    sha256 "493d2d313edafa0b34ed05ea0fd0555bc44f3035b5d60f844c221dd25cad2be0"
+    sha256 "c0e51ca2a80c35678f2f53622071b9cdbce1ba1025aed163089c08464603789d"
   end
 
   def install
