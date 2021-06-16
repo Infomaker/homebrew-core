@@ -5,27 +5,27 @@
 class LccCli < Formula
   desc "Live Content API CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.0.2"
+  version "0.0.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.2/lcc-go-sdk_macOS_64-bit.zip"
-    sha256 "bbc89401a33b5541ffd9589c53aebce7c65bbf1716beed4441e9f9e8c4286edd"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.3/lcc-go-sdk_macOS_64-bit.zip"
+    sha256 "15a65e542612711495cf8788460416ca672f98106929263bc613ddefb0b3d488"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.2/lcc-go-sdk_macOS_arm64.zip"
-    sha256 "5d7b3217ecc3053ee65d2f7ff27fdda04d70f3760f27844920e69df8490a7420"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.3/lcc-go-sdk_macOS_arm64.zip"
+    sha256 "35c029bc62a0dfa407821d787b6c98e00e4a784598f8d6f7b5d939fb5d677cfe"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.2/lcc-go-sdk_Tux_64-bit.zip"
-    sha256 "ef963f451c5a78de3e0b7d8aec513b56edcc794846ae68ba9777b2e092c376e8"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.3/lcc-go-sdk_Tux_64-bit.zip"
+    sha256 "7ac34cc3680f669d65e7c7bc233fca0d9c2deea2e4e6e643b4b3e0831264fa7c"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.2/lcc-go-sdk_Tux_arm64.zip"
-    sha256 "73dc44e73c6aaa629cfcced3f95ff4a0ede192adfdfb3dcfae069715793e3018"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.3/lcc-go-sdk_Tux_arm64.zip"
+    sha256 "990500d94f5edee1bff5a21c9c3506da6719e6e2791771deacc8863d66a57d48"
   end
 
   def install
-    lcc-cli
+    bin.install "lcc-cli"
   end
 end
