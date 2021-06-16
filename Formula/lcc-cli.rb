@@ -5,27 +5,27 @@
 class LccCli < Formula
   desc "Live Content API CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.1/lcc-go-sdk_macOS_64-bit.zip"
-    sha256 "a16e51e47b74abf7b1f078a1f4d19d6d691f4885ffb9d63bdcf403365acca2c1"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.2/lcc-go-sdk_macOS_64-bit.zip"
+    sha256 "bbc89401a33b5541ffd9589c53aebce7c65bbf1716beed4441e9f9e8c4286edd"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.1/lcc-go-sdk_macOS_arm64.zip"
-    sha256 "609de39d2b30f292919ff095304f6df323748ce83ef55a94fe50cddbd770a3fe"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.2/lcc-go-sdk_macOS_arm64.zip"
+    sha256 "5d7b3217ecc3053ee65d2f7ff27fdda04d70f3760f27844920e69df8490a7420"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.1/lcc-go-sdk_Tux_64-bit.zip"
-    sha256 "8446f78801296be5ce420bc1aaa2b3101bdd2987ae1ff1d4eee0b9c0b8029ec0"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.2/lcc-go-sdk_Tux_64-bit.zip"
+    sha256 "ef963f451c5a78de3e0b7d8aec513b56edcc794846ae68ba9777b2e092c376e8"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.1/lcc-go-sdk_Tux_arm64.zip"
-    sha256 "0066f8b6f618f2a3b366005a879bde69535bd481540494826955cded075954d5"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.2/lcc-go-sdk_Tux_arm64.zip"
+    sha256 "73dc44e73c6aaa629cfcced3f95ff4a0ede192adfdfb3dcfae069715793e3018"
   end
 
   def install
-    bin.install "lcc-go-sdk"
+    lcc-cli
   end
 end
