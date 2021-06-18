@@ -5,24 +5,24 @@
 class DocCli < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.3.0"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.3.0/doc-cli_macOS_64-bit.zip"
-    sha256 "5373a34ee15fe41c5ce7d373a17cd003cedebb1a67b9f650bb6284439d6af305"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.4.0/doc-cli_macOS_64-bit.zip"
+    sha256 "7ae00ea501f78858999160fa32814d8136ef8a61a31ae22703a1ed1e281e18f6"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.3.0/doc-cli_macOS_arm64.zip"
-    sha256 "8ed64f07747f42f4bbe90decb3cf6fd0405c10bc063d8000a95276339c44c11f"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.4.0/doc-cli_macOS_arm64.zip"
+    sha256 "48217071bee16deff0bde0f2aded12837461ffd29ae6fccfa0aff1f313d1b5e2"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.3.0/doc-cli_Tux_64-bit.zip"
-    sha256 "dfb95c93558602f62fde5b65890f2f8cb6ef030a447f84ef3c1faf90957bdd8f"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.4.0/doc-cli_Tux_64-bit.zip"
+    sha256 "bb1c4aaaafe7b261ddb7b51b4288866afb7967a3a1a37d90fd669382742979fe"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.3.0/doc-cli_Tux_arm64.zip"
-    sha256 "c0e51ca2a80c35678f2f53622071b9cdbce1ba1025aed163089c08464603789d"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/doc-cli/0.4.0/doc-cli_Tux_arm64.zip"
+    sha256 "963acc216b30797fd3cfda725c040be055e74c4546eb1439d29525c2a3998dbd"
   end
 
   def install
