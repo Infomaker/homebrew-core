@@ -10,11 +10,11 @@ class ImageengineCli < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.1.1/imageengine-cli_macOS_64-bit.zip"
-    sha256 "f0435da11422c57afcd38ea7e0faa22ee73f292a9dab496b670048239c907351"
+    sha256 "e5000948a9d79cd53b3dd41b86f36336f1b32158fc584378c3cc93bc6e25a860"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.1.1/imageengine-cli_macOS_arm64.zip"
-    sha256 "b79aee12810d4f911bbee1fa96ccdb80b415294848f375d36ab8b6b7c7145f9e"
+    sha256 "2eb76b979d861b23d33af0d57d64eae51de3dcbc89617d0913fa42a33dac894a"
   end
 
   def install
