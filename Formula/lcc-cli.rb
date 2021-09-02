@@ -5,24 +5,24 @@
 class LccCli < Formula
   desc "Live Content API CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.0.4"
+  version "0.0.5"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.4/lcc-go-sdk_macOS_64-bit.zip"
-    sha256 "1ce5f308311f438bc1878d6692a57cbd4dda6af8314ba509e40d3db028cbd392"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.5/lcc-go-sdk_macOS_64-bit.zip"
+    sha256 "292b938a567322ebe04e4971c5d7b554586c45d31f3fed148166f8517eb2b983"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.4/lcc-go-sdk_macOS_arm64.zip"
-    sha256 "9539484edd88c179948995c89355a91af2cb4e5bcb906d34406a5eccf15cc931"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.5/lcc-go-sdk_macOS_arm64.zip"
+    sha256 "0620a60536e7120c940f57485a52a53d9fd44f0d67756ec2825a0a09e303fcfb"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.4/lcc-go-sdk_Tux_64-bit.zip"
-    sha256 "c42b60f219bfbc5df50daa381c95191643044906f56e49a8e28bbb7ef48008cb"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.5/lcc-go-sdk_Tux_64-bit.zip"
+    sha256 "07b1300434c44d5ed354c5ffff52e6b232b25ef0251112fed37e3751b421d476"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.4/lcc-go-sdk_Tux_arm64.zip"
-    sha256 "7f9b87399dba431d7a65ff114010a21b4c9c27f6d26cfe1b4b900b0fc20fea96"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.5/lcc-go-sdk_Tux_arm64.zip"
+    sha256 "23844decd9c4e43f6060f87a14311ddac4c24f796d29e836b15f59df4a2915b9"
   end
 
   def install
