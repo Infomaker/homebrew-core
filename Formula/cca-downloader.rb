@@ -5,24 +5,24 @@
 class CcaDownloader < Formula
   desc "Downloads assets using CCA."
   homepage "https://bitbucket.org/infomaker/cca-downloader/"
-  version "0.1.1"
+  version "0.2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.1.1/cca-downloader_darwin_amd64.zip"
-      sha256 "645b68f32b89b6afeb656c247014209b18a1985ca67405bf4b6f94102ab0685d"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.0/cca-downloader_darwin_amd64.zip"
+      sha256 "79dea0ed2f1a18e252fdbbf82deacff343783799c51cad2a42cb1b38bd6c124e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.1.1/cca-downloader_linux_amd64.zip"
-      sha256 "a6df04a6d248e445f93dee753f3f1c9295dda981e9b6a3f3dc6a953a3d691b61"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.0/cca-downloader_linux_amd64.zip"
+      sha256 "ac34ae5b8f0d3cd0a3b05aa1abfedc44ca05c9546009d5dc2d86560edfd5e1d2"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.1.1/cca-downloader_linux_arm64.zip"
-      sha256 "857fff605240433ae404ed1f3696ce674aa67b7311dbb425af7f3e2d70525222"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.0/cca-downloader_linux_arm64.zip"
+      sha256 "15bbe37807931f18a2cff1360c6976841cf4882859bd1960640321de786f5799"
     end
   end
 
