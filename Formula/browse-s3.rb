@@ -10,19 +10,19 @@ class BrowseS3 < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/browse-s3/0.0.2/browse-s3_macOS_64-bit.zip"
-    sha256 "b718c42a180f18cd5f463ed7ded135d17f962fa58ec80d167fa28e9bc1f114cd"
+    sha256 "e9be41100f838eaffa475fe30e906526d1befa65d7a4e2a9cedf68609eeb9e50"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/browse-s3/0.0.2/browse-s3_macOS_arm64.zip"
-    sha256 "27792d4f7343a987b139b99a128d5b8ac07a37849326ef8edefb543fd4a5f4a6"
+    sha256 "4ac4bcd0a13f1185a7e70d5ce6815405ce23c8ad7c692c97ef73667d7110e3f3"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/browse-s3/0.0.2/browse-s3_Tux_64-bit.zip"
-    sha256 "e445bf30aa0a02072ef9a9f8df3c1df651c99d54bf33c6799455a7f1814cf0ff"
+    sha256 "5fbfb5d3f466eeb347e4e89ef2c8422432dd1321b2494829d842b6599d12ef9b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/browse-s3/0.0.2/browse-s3_Tux_arm64.zip"
-    sha256 "8873d0542c97ce2092613a011a2d95e14e420e699a15000e959ffaf137b92435"
+    sha256 "1e222f77f566ece3151b1e70b25cfb8fe882a523352731031354cc28708fed2e"
   end
 
   def install
