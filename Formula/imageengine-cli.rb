@@ -5,16 +5,16 @@
 class ImageengineCli < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.1.5"
+  version "0.1.7"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.1.5/imageengine-cli_macOS_64-bit.zip"
-    sha256 "3978b63c3e6facb7ff06bdcbd8b55505d6a97f43c2b21c56843ccefd703d2ada"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.1.7/imageengine-cli_macOS_64-bit.zip"
+    sha256 "3c77c7f71c1cd03ffa7e4eabe1403584860db6dfe1046b839e1f1f88fce7c819"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.1.5/imageengine-cli_macOS_arm64.zip"
-    sha256 "89575fe9a02c6c47a79a60195ffa08e0647f5e71f6767db0f9cd613f2b7428c5"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.1.7/imageengine-cli_macOS_arm64.zip"
+    sha256 "bfe41868f1a7970bb0700429ed399eebc3bb0c9c56045b0ec4439a65dfc16241"
   end
 
   def install
