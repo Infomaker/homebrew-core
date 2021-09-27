@@ -9,20 +9,20 @@ class BinarymigrationtoolCli < Formula
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool_macOS_64-bit.zip"
-    sha256 "f851ad71f8ca6ee58a1d201c919ae28a2abbf95a816e6616ee4a4251be1f195b"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool-cli_macOS_64-bit.zip"
+    sha256 "b1014d19a749a32fa1daf3a2752549b8840fa738c0d7c3e28ef8cc259616d19b"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool_macOS_arm64.zip"
-    sha256 "d9205bdc4418ce229569723eb9c72af170651b7fb2959a339da83e275df4f326"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool-cli_macOS_arm64.zip"
+    sha256 "59eed8070b27304df07e4d9d4d39faf3425a4dd89440e22406f77fc3286ea6e9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool_Tux_64-bit.zip"
-    sha256 "9a918a91f830fc6da764a3db8cae5242ed2433276c523d7c53db2b2aea101d07"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool-cli_Tux_64-bit.zip"
+    sha256 "7001786e3598a6841f5f1a5f5795398dabac1f196b5381b8135c61c87e61e786"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool_Tux_arm64.zip"
-    sha256 "00bf566efe947cf4fd2c22a44e807939579f10dc625488679a5b412c53551149"
+    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool-cli_Tux_arm64.zip"
+    sha256 "863bd4855ed8dce56c70b5f105bdc37684121e466d5a2c5d62b7cb88d37352a4"
   end
 
   def install
