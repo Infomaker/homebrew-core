@@ -10,19 +10,19 @@ class BinarymigrationtoolCli < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool_macOS_64-bit.zip"
-    sha256 "8e35fa9d45ee7e584b8c1fc7a7ea01b7907c0d8423f71e03fb37c6529c70e8e0"
+    sha256 "f851ad71f8ca6ee58a1d201c919ae28a2abbf95a816e6616ee4a4251be1f195b"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool_macOS_arm64.zip"
-    sha256 "10e6ae17c4d893acbe3df69bbe372056feb707405fbf1cbcffb90c64907bede0"
+    sha256 "d9205bdc4418ce229569723eb9c72af170651b7fb2959a339da83e275df4f326"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool_Tux_64-bit.zip"
-    sha256 "fb2e2947cd84bff14839b33a31069fc09eb9ebc3621004079d9be4e669fbe788"
+    sha256 "9a918a91f830fc6da764a3db8cae5242ed2433276c523d7c53db2b2aea101d07"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool-cli/0.1.0/binarymigrationtool_Tux_arm64.zip"
-    sha256 "2011337f943fe39fc895b7b157f2f1ded4f4c3f7dbbacce71fdf4b792c531e4e"
+    sha256 "00bf566efe947cf4fd2c22a44e807939579f10dc625488679a5b412c53551149"
   end
 
   def install
