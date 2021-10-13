@@ -5,24 +5,24 @@
 class Syncbucket < Formula
   desc "Utility for patching up image S3 buckets."
   homepage "https://bitbucket.org/infomaker/syncbucket/"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/syncbucket/0.1.0/syncbucket_darwin_amd64.zip"
-      sha256 "a1e52f65b5594b5af970009e51e13881c3c6fe788595d4a6c651117d6d351a44"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/syncbucket/0.1.1/syncbucket_darwin_amd64.zip"
+      sha256 "760d082bf97b98707577797a0f8e219eed5a4c0b670781f13796840452becc25"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/syncbucket/0.1.0/syncbucket_linux_amd64.zip"
-      sha256 "3c09a686674aee43e0cb011f724a5486cb21b46812d24a24f4afb206c6bb284e"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/syncbucket/0.1.1/syncbucket_linux_amd64.zip"
+      sha256 "871bbccd82548f14787057d6ac6a58ea0bdf53feaa8df6607c3fdc44e556e98c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/syncbucket/0.1.0/syncbucket_linux_arm64.zip"
-      sha256 "aa743c35bdbd76f0357e25a4e965a198e8bc3cdd0ffe2e833f103ce8ea51c032"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/syncbucket/0.1.1/syncbucket_linux_arm64.zip"
+      sha256 "f18a766ce692fe0df98d77d4e9a9fe822385548535709de9e044e099cb85a5ba"
     end
   end
 
