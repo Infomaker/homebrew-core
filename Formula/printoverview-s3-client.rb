@@ -5,24 +5,24 @@
 class PrintoverviewS3Client < Formula
   desc "Upload and download page publication files to Print Overview API."
   homepage "https://bitbucket.org/infomaker/printoverview-s3-client/"
-  version "0.3"
+  version "0.4"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.3/printoverview-s3-client_darwin_amd64.zip"
-      sha256 "72fbe4d1a0aceec27e6dbee861c6360deed2cba170978812311b1534851142be"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.4/printoverview-s3-client_darwin_amd64.zip"
+      sha256 "9de99d15c3ac1ccc9dcd495ed1cdc1fac2626fe914be98e2bc83096510371af0"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.3/printoverview-s3-client_linux_amd64.zip"
-      sha256 "dd2bfece0016f30b3e65b6e8e0f6b3842ff31a0dcb976fdbc4da0a105f9228aa"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.4/printoverview-s3-client_linux_amd64.zip"
+      sha256 "6ce55937cba371f452f734781d69dd5b0af02e9f28a26b165b8a50b7f8ff32b9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.3/printoverview-s3-client_linux_arm64.zip"
-      sha256 "942494d3c38d15c088ddd4d591fdff0d2ed24c51a1ef2811a5d5f14ac1e3607e"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.4/printoverview-s3-client_linux_arm64.zip"
+      sha256 "0bea16e184b8d1826bfb112eec876ec0d259e9ef004cb1dea4b93292beca9730"
     end
   end
 
