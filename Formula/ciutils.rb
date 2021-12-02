@@ -5,24 +5,24 @@
 class Ciutils < Formula
   desc "Common CI workflows"
   homepage "https://bitbucket.org/infomaker/ciutils/"
-  version "0.8.0"
+  version "0.8.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.8.0/ciutils_darwin_amd64.tar.gz"
-      sha256 "ad0507df756f7a107a99633bcc4a872fbf503a6d3bfd8ba63f9617baa2a0263b"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.8.1/ciutils_darwin_amd64.tar.gz"
+      sha256 "2be62bf3498f2a14f33d601aedb09ea62b46c625018c9fa6a6f485b764c34799"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.8.0/ciutils_linux_amd64.tar.gz"
-      sha256 "fd0c65d5de47c9c05cdada77051e1d4df4bdea7d78a8fd164122b38f7489517a"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.8.1/ciutils_linux_amd64.tar.gz"
+      sha256 "9bf90bd90a2d86c2d7d4b2f12e3da8df38603d57e1d3145754e341f856702247"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.8.0/ciutils_linux_arm64.tar.gz"
-      sha256 "2b38c59859ac4de622bafd3a27ce145e918c04150456e50b350eee9fb931817d"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.8.1/ciutils_linux_arm64.tar.gz"
+      sha256 "4e3cf66544853cf956415b31e189b29efe25fb46bbd2fb875147c0664add246d"
     end
   end
 
