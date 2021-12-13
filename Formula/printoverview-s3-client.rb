@@ -5,28 +5,43 @@
 class PrintoverviewS3Client < Formula
   desc "Upload and download page publication files to Print Overview API."
   homepage "https://bitbucket.org/infomaker/printoverview-s3-client/"
-  version "0.6"
-  bottle :unneeded
+  version "1.0.0"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/1.0.0/printoverview-s3-client_darwin_arm64.zip"
+      sha256 "0d6a7024496e76628ec9731ae16c531d18adb12ed9ff4510d3b42ae60092efe8"
+
+      def install
+        bin.install "printoverview-s3-client"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.6/printoverview-s3-client_darwin_amd64.zip"
-      sha256 "e0f18ff7f7a22fa07adf548b98c53840f36b8d16230e690100a50556ec8cca1c"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/1.0.0/printoverview-s3-client_darwin_amd64.zip"
+      sha256 "c44f62750e3768fed7e9f6ebc301ad1766a90223e66a8f5a6ec956c9db26cab3"
+
+      def install
+        bin.install "printoverview-s3-client"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.6/printoverview-s3-client_linux_amd64.zip"
-      sha256 "29277ed0f13134544f8b61f4f4ff87e69849d416c6239937a3c3c800be05ab18"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/0.6/printoverview-s3-client_linux_arm64.zip"
-      sha256 "514b0486db3acf8811f1d7a1c5eed45f70861cd9702e02f70e597d989631412e"
-    end
-  end
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/1.0.0/printoverview-s3-client_linux_arm64.zip"
+      sha256 "7eeed75dea47d26a34851453cfdc5968450794b0e5d11ecdd7466fdf7bf0ad56"
 
-  def install
-    bin.install "printoverview-s3-client"
+      def install
+        bin.install "printoverview-s3-client"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/printoverview-s3-client/1.0.0/printoverview-s3-client_linux_amd64.zip"
+      sha256 "bd3dde1ca64ea848495b9539cd7e24e4e8ae78d1b8f4519b272ecb327075f2ba"
+
+      def install
+        bin.install "printoverview-s3-client"
+      end
+    end
   end
 end
