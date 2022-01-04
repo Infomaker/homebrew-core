@@ -5,20 +5,20 @@
 class WriterSaasAdmin < Formula
   desc "CLI tool for Writer SaaS services."
   homepage "https://bitbucket.org/infomaker/writer-saas-admin/"
-  version "1.3.0-rc.1"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.3.0-rc.1/writer-saas-admin_darwin_arm64.zip"
-      sha256 "5bdc094cef36b6b0119d3ad9ed4e1d52aa4fba28b1192b4f173cced896131028"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.3.0/writer-saas-admin_darwin_arm64.zip"
+      sha256 "74f13912f15c23547bd0d85eb304f9f82b7a3f55b96b1c5f2511b5087956a923"
 
       def install
         bin.install "writer-saas-admin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.3.0-rc.1/writer-saas-admin_darwin_amd64.zip"
-      sha256 "40d0072a59b4d0dcdf611ef607d02ec71335cfe612d51a987ee3b6c7caa96b87"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.3.0/writer-saas-admin_darwin_amd64.zip"
+      sha256 "c7065bde55f2a6cadb3df0c5470ac78af8ff3a4c83f885e439983da41600905f"
 
       def install
         bin.install "writer-saas-admin"
@@ -28,16 +28,16 @@ class WriterSaasAdmin < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.3.0-rc.1/writer-saas-admin_linux_arm64.zip"
-      sha256 "34a056ae8e5e8886dbc35e31a3f6224a0b0ada04bd86ca09a31036a003ff28b3"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.3.0/writer-saas-admin_linux_arm64.zip"
+      sha256 "39ae056876eb5fb9a7686ef039c27c05da52978683f86493621e1395ecc20d85"
 
       def install
         bin.install "writer-saas-admin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.3.0-rc.1/writer-saas-admin_linux_amd64.zip"
-      sha256 "05b1e8eab0133093528d4aaa90aee56dfb90304ff507c9c7ed895dbf4120a862"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.3.0/writer-saas-admin_linux_amd64.zip"
+      sha256 "74c1a2b3ebbc78e28fe5ea936353a79ab342cc5b1199c1b2408337057a56cf7d"
 
       def install
         bin.install "writer-saas-admin"
