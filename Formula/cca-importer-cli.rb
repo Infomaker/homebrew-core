@@ -8,17 +8,17 @@ class CcaImporterCli < Formula
   version "0.0.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.1/cca-importer-cli_darwin_amd64.zip"
-      sha256 "7218ca084f6d2e7721f6d3c2d52d53dccbc73b6d84dd2ad6ccc846b10746e079"
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.1/cca-importer-cli_darwin_arm64.zip"
+      sha256 "06ae1cd67431d02cfd97d4be5cef0dadf80e1a664261f906533d20662370bf79"
 
       def install
         bin.install "cca-importer-cli"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.1/cca-importer-cli_darwin_arm64.zip"
-      sha256 "99022a5763ddc4bafd3effa28f9c9c3de7751129f8faf676ae44089b1999eda9"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.1/cca-importer-cli_darwin_amd64.zip"
+      sha256 "6421c12ff87d9e0caf86f2a4ff5e3fefd9296c49cdc30105f757801a5df07ae2"
 
       def install
         bin.install "cca-importer-cli"
@@ -29,7 +29,7 @@ class CcaImporterCli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.1/cca-importer-cli_linux_arm64.zip"
-      sha256 "e3a3453096b5a7ecdfdc80a436edfe9a072dfa2e29cc188421a37eb326049fd0"
+      sha256 "792ef53bade31b1d08cb75f40636161e74f21890051e4a986f5882b469514972"
 
       def install
         bin.install "cca-importer-cli"
@@ -37,7 +37,7 @@ class CcaImporterCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.1/cca-importer-cli_linux_amd64.zip"
-      sha256 "ba25ed72eb4dcae6b2c2ce7882a178a05f7213fca5b697d8f4f622d873af8a29"
+      sha256 "8ae84a8c96da0900e0c1f548db97448bc2e4c6995e438814ca02593a290618ff"
 
       def install
         bin.install "cca-importer-cli"
