@@ -5,20 +5,20 @@
 class CcaImporterCli < Formula
   desc "Handle CCA Importer tasks."
   homepage "https://bitbucket.org/infomaker/cca-importer-cli/"
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.7/cca-importer-cli_darwin_arm64.zip"
-      sha256 "587fb65baef0f76a9521bd4ce0e7e489914f48c5ca1676245bab7166f15e8ba4"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.8/cca-importer-cli_darwin_arm64.zip"
+      sha256 "638e55be82b7190be1a0e87d82558230c8d4426ed36acaf586da330890399268"
 
       def install
         bin.install "cca-importer-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.7/cca-importer-cli_darwin_amd64.zip"
-      sha256 "24b5b2c62ec68cd808de6683a820f79b233eb600c3cb8a94d95f3637a8cc4a5c"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.8/cca-importer-cli_darwin_amd64.zip"
+      sha256 "bf11b917a4c194d89b7b3cf939b30998f9b1fc539f03cc92968dcf3a3ab3f5fb"
 
       def install
         bin.install "cca-importer-cli"
@@ -28,16 +28,16 @@ class CcaImporterCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.7/cca-importer-cli_linux_arm64.zip"
-      sha256 "d608d7da79317db2ff470300f33fd12b94d296984248f2ee0e81e30f86165295"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.8/cca-importer-cli_linux_arm64.zip"
+      sha256 "ecb911a0e226fbd2a268156d2d40ba4af46c0e41319c2346b02d553729dcd29c"
 
       def install
         bin.install "cca-importer-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.7/cca-importer-cli_linux_amd64.zip"
-      sha256 "00b370ac18c71c4347232aad9dc17e885fb9db66e20bbce2260078a6bc7a86fd"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-cli/0.0.8/cca-importer-cli_linux_amd64.zip"
+      sha256 "f0674353cd6e6dd18df4015fcef8053728dae42ed08f4265b9f84c3c7be2c66b"
 
       def install
         bin.install "cca-importer-cli"
