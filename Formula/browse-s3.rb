@@ -6,7 +6,6 @@ class BrowseS3 < Formula
   desc "CLI Tools"
   homepage "https://navigaglobal.com"
   version "0.0.2"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/browse-s3/0.0.2/browse-s3_macOS_64-bit.zip"

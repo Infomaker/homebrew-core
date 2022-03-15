@@ -6,7 +6,6 @@ class Archives3 < Formula
   desc "Archive S3 is a POC for creating backup archives from a bucket."
   homepage "https://bitbucket.org/infomaker/archives3/"
   version "0.3.3"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.3/archives3_darwin_amd64.zip"

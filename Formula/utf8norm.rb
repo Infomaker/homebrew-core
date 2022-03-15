@@ -6,7 +6,6 @@ class Utf8norm < Formula
   desc "Normalises UTF8 filenames to NFC."
   homepage "https://bitbucket.org/infomaker/utf8norm/"
   version "0.1.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

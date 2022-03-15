@@ -6,7 +6,6 @@ class Binarymigrationtool < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
   version "0.1.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

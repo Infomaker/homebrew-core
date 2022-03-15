@@ -6,7 +6,6 @@ class ImageengineCli < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
   version "0.3.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.3.0/imageengine-cli_macOS_64-bit.zip"

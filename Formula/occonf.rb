@@ -3,7 +3,6 @@ class Occonf < Formula
   desc "Merges and validates Open Content configuration files."
   homepage "https://bitbucket.org/infomaker/occonf/"
   version "0.6.1"
-  bottle :unneeded
 
   if OS.mac?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.6.1/occonf_darwin_amd64.zip"

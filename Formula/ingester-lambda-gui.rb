@@ -3,7 +3,6 @@ class IngesterLambdaGui < Formula
   desc "Ingester Lambda GUI Tool"
   homepage "https://navigaglobal.com"
   version "0.0.3"
-  bottle :unneeded
 
   if OS.mac?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ingester-lambda-gui/0.0.3/ingester-lambda-gui_macOS_64-bit.zip"

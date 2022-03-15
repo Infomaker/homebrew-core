@@ -6,7 +6,6 @@ class LccCli < Formula
   desc "Live Content API CLI Tools"
   homepage "https://navigaglobal.com"
   version "0.0.5"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.5/lcc-go-sdk_macOS_64-bit.zip"

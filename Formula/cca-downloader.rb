@@ -6,7 +6,6 @@ class CcaDownloader < Formula
   desc "Downloads assets using CCA."
   homepage "https://bitbucket.org/infomaker/cca-downloader/"
   version "0.2.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

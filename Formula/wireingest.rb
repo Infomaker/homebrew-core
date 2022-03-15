@@ -3,7 +3,6 @@ class Wireingest < Formula
   desc "Administrative tool for wire ingest config."
   homepage "https://bitbucket.org/infomaker/wireingest/"
   version "0.3.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/wireingest/0.3.0/wireingest_darwin_amd64.zip"

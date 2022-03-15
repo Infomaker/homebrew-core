@@ -6,7 +6,6 @@ class Syncbucket < Formula
   desc "Utility for patching up image S3 buckets."
   homepage "https://bitbucket.org/infomaker/syncbucket/"
   version "0.1.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
