@@ -5,31 +5,43 @@
 class Binarymigrationtool < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool/0.1.1/binarymigrationtool_macOS_64-bit.zip"
-      sha256 "acf45b4c08cfe626cd8c39d7537d5c1eea1cff2f281b6259cdfeba89f0a9f702"
-    end
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool/0.1.1/binarymigrationtool_macOS_arm64.zip"
-      sha256 "dc3f11b671ad22eb2390884316ef6d953d7832976016fc47b220966d53747aae"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool/0.2.0/binarymigrationtool_macOS_arm64.zip"
+      sha256 "3df368995e0126c017cdd3faaea0f273bb37b889112d85061156f3979848f9cb"
+
+      def install
+        bin.install "binarymigrationtool"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool/0.2.0/binarymigrationtool_macOS_64-bit.zip"
+      sha256 "69d486922e9fd1efb8cf4bf3abbfaecc8a483e7543d235d4224ab360e68ef137"
+
+      def install
+        bin.install "binarymigrationtool"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool/0.1.1/binarymigrationtool_Tux_64-bit.zip"
-      sha256 "58b466472a46e8c248353845cf540509807cfbb1a41df768107957b5d3441db5"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool/0.1.1/binarymigrationtool_Tux_arm64.zip"
-      sha256 "a87c93bf3ca2116c622e991da58cad91e60fcc2f6f61c473c9f62129e864db91"
-    end
-  end
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool/0.2.0/binarymigrationtool_Tux_arm64.zip"
+      sha256 "d6236819fc83bf1b49e5e18e5a566b472443c4ecdf1592eee964a08dae406fe4"
 
-  def install
-    bin.install "binarymigrationtool"
+      def install
+        bin.install "binarymigrationtool"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/binarymigrationtool/0.2.0/binarymigrationtool_Tux_64-bit.zip"
+      sha256 "a204614f7bf3d27b2ddaaf1966bb05a363585f4fbcc69d56f20da5f91a7d9bac"
+
+      def install
+        bin.install "binarymigrationtool"
+      end
+    end
   end
 end
