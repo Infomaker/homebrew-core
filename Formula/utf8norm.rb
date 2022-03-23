@@ -10,22 +10,38 @@ class Utf8norm < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/utf8norm/0.1.0/utf8norm_darwin_amd64.zip"
-      sha256 "ce7f876f5c7bd383679b22b04662339d487d05b701f9ec623489b346e2307c47"
+      sha256 "0fa505ae7455c839afd5242c5bbb3b0f3ca64d18bb05792026a7ca4d476ffa06"
+
+      def install
+        bin.install "utf8norm"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/utf8norm/0.1.0/utf8norm_darwin_arm64.zip"
+      sha256 "5002820eef889cec67954af55093ed64242a7570ed3b0bfe45938e903f71f9d5"
+
+      def install
+        bin.install "utf8norm"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/utf8norm/0.1.0/utf8norm_linux_amd64.zip"
-      sha256 "5d939061655b762059f0fafc8e1d34c6722d781952eb39ae4681700cac24dbc5"
+      sha256 "b5de750adb8392004f8f6da566580b5cee68afe4cfd704d99eff80a9af2d35c2"
+
+      def install
+        bin.install "utf8norm"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/utf8norm/0.1.0/utf8norm_linux_arm64.zip"
-      sha256 "0b2c847273a251f45fe7b181206648cf80c18990d39299db64bd6edff0202306"
-    end
-  end
+      sha256 "6baf075e1cc524b31e3dd434d96601a582edeb756a38b37ebe5a50b671200c84"
 
-  def install
-    bin.install "utf8norm"
+      def install
+        bin.install "utf8norm"
+      end
+    end
   end
 end
