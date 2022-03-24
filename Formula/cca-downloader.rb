@@ -10,22 +10,38 @@ class CcaDownloader < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/cca-downloader_darwin_amd64.zip"
-      sha256 "e445d011f3fc0ab79ef40c3c0bfb73121d95576cc0e3ab6a3e97a1056f1c0bad"
+      sha256 "73dacec61672fa293f844550c845bf5b3009bf0fd7db4d7ea51b4e80039166a1"
+
+      def install
+        bin.install "cca-downloader"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/cca-downloader_darwin_arm64.zip"
+      sha256 "386b4e2dddd120daf72de8a08bcd2e1020e5940da0a8466b917214f90277b537"
+
+      def install
+        bin.install "cca-downloader"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/cca-downloader_linux_amd64.zip"
-      sha256 "755aa65ac1714ab4ec44fa29e25ff1a463738f74b68a2dc9d7808ec43e0fdffc"
+      sha256 "9e2f83cddd147e44ffd4be97240b7caf90043608373ff470a37edae8a729ef62"
+
+      def install
+        bin.install "cca-downloader"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/cca-downloader_linux_arm64.zip"
-      sha256 "c444cf0a0e70643baf64a952e2bbc47964a428d4f43dcb42d6113efcb8f46fd3"
-    end
-  end
+      sha256 "c1df5946e8956f4b8e81e1b9d553d9f03542fe624ec8ba1c871f32b3d6a065c1"
 
-  def install
-    bin.install "cca-downloader"
+      def install
+        bin.install "cca-downloader"
+      end
+    end
   end
 end
