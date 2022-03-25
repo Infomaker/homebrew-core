@@ -5,20 +5,20 @@
 class LccCli < Formula
   desc "Live Content API CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.0.7"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.7/lcc-go-sdk_macOS_arm64.zip"
-      sha256 "a870813584e0595e1c159148df8661cb160b2cb49b156fa9a352e52007fc1ad9"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.1.0/lcc-go-sdk_macOS_arm64.zip"
+      sha256 "e84b8c3202ac47589fb81ec956a95b03b0b72557f5878c682788d08f5bb8a227"
 
       def install
         bin.install "lcc-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.7/lcc-go-sdk_macOS_64-bit.zip"
-      sha256 "3a033a4cf35c9718fe3bccdfedce435ecc19e6212e7eb96b0a8957054cec3fec"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.1.0/lcc-go-sdk_macOS_64-bit.zip"
+      sha256 "597f93cc9d500a0cfe62eba940e9326c64af1388e08a8942215c2f99e58222f9"
 
       def install
         bin.install "lcc-cli"
@@ -28,16 +28,16 @@ class LccCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.7/lcc-go-sdk_Tux_arm64.zip"
-      sha256 "e6380cfa3f7d963c111c9b7c640dbdf401b9fc3dc99db92cdba40c9e08921d0d"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.1.0/lcc-go-sdk_Tux_arm64.zip"
+      sha256 "eb8e7696d11348f634a650e62b92ba240c9bc11fc43a7e5a4f7c442ef401ed8c"
 
       def install
         bin.install "lcc-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.0.7/lcc-go-sdk_Tux_64-bit.zip"
-      sha256 "e683f97907c0874a7274e48aeb5dd5d7eab9f7f6c39c3f4a1b2c75aed3efd55f"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/lcc-cli/0.1.0/lcc-go-sdk_Tux_64-bit.zip"
+      sha256 "1630530d4d2eb3e245344907c39e0564711a2d6fd147215232f4ed823eb19616"
 
       def install
         bin.install "lcc-cli"
