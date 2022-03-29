@@ -5,20 +5,20 @@
 class CcaUploader < Formula
   desc "Uploads assets using CCA."
   homepage "https://bitbucket.org/infomaker/cca-uploader/"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-uploader/0.2.0/cca_uploader_darwin_arm64.zip"
-      sha256 "bb61e71249692f3f4338cc093d366614c0c3c07fda32be3115f4ab167c426e5d"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-uploader/0.3.0/cca_uploader_darwin_arm64.zip"
+      sha256 "072c224d95c9a7c1627d1cf937ec6bbfc20bbfd3ba9e6bfe69a117fb251e9bf3"
 
       def install
         bin.install "cca_uploader"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-uploader/0.2.0/cca_uploader_darwin_amd64.zip"
-      sha256 "a4d4cc7819984a22c08c2dc6e05d1ac8f3d9d3e95e7aeb5e72fc94d7944934d9"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-uploader/0.3.0/cca_uploader_darwin_amd64.zip"
+      sha256 "036e0ace731b7f71fe07a8d406fc0caae08c29f6e999bd75247420f72741ef58"
 
       def install
         bin.install "cca_uploader"
@@ -28,16 +28,16 @@ class CcaUploader < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-uploader/0.2.0/cca_uploader_linux_arm64.zip"
-      sha256 "ed4aeae1522530634cb428ec92fd31385915ba41e3255a29183f27faa26eeba6"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-uploader/0.3.0/cca_uploader_linux_arm64.zip"
+      sha256 "c160f7c35c96ba8e3b55792cebcdd644152f083712642a2b32bcd807cc6116f6"
 
       def install
         bin.install "cca_uploader"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-uploader/0.2.0/cca_uploader_linux_amd64.zip"
-      sha256 "2cf15f7061b68b42ac1c008bc1c93f7beffafe9a6c31930a0cc708051345f78a"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-uploader/0.3.0/cca_uploader_linux_amd64.zip"
+      sha256 "e2248884079403063d4cd3648a63cfb66bea254c392e144d0135c11d05d0ea20"
 
       def install
         bin.install "cca_uploader"
