@@ -5,20 +5,20 @@
 class Panurge < Formula
   desc "Panurge utility"
   homepage "https://bitbucket.org/infomaker/panurge/"
-  version "1.11.0"
+  version "1.12.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/panurge/1.11.0/panurge_darwin_amd64.tar.gz"
-      sha256 "550ef83c80a71d14c9e8c27cf3f8c9fbe8173b0ef779bb45761c7442d321159a"
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/panurge/1.12.0/panurge_darwin_arm64.tar.gz"
+      sha256 "d3f325836aa4eaf02212e17e9383ab2c02b2448d5715c3cf8257a713f9265b1a"
 
       def install
         bin.install "panurge"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/panurge/1.11.0/panurge_darwin_arm64.tar.gz"
-      sha256 "2c491b151be83a26e7b428c36c2d7a988443b3e8da0429cbec08215ff5f679e8"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/panurge/1.12.0/panurge_darwin_amd64.tar.gz"
+      sha256 "b0d9a60451bc9148add0b29cce77304de159f744c0e19460243a87af39cc67c5"
 
       def install
         bin.install "panurge"
@@ -28,16 +28,16 @@ class Panurge < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/panurge/1.11.0/panurge_linux_arm64.tar.gz"
-      sha256 "8a3a4b025a37556b9ea251d1640c8906b6d767f9016a0c3778ecc784f76a573b"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/panurge/1.12.0/panurge_linux_arm64.tar.gz"
+      sha256 "958f318661881cf1c5b19b7dfe858121d9dc56ae1bfe785897af024e9bf5eb43"
 
       def install
         bin.install "panurge"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/panurge/1.11.0/panurge_linux_amd64.tar.gz"
-      sha256 "bc54754c5a44d9e8adc6f5b68e7f6d9c15919fdb36f01b9207e4e5d3a454391f"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/panurge/1.12.0/panurge_linux_amd64.tar.gz"
+      sha256 "07c1c09a49fcd7cac5d790dfb9e72974893edc5dc670722ee95b9e6ab185451b"
 
       def install
         bin.install "panurge"
