@@ -5,20 +5,20 @@
 class Panurge < Formula
   desc "Panurge utility"
   homepage "https://github.com/navigacontentlab/panurge"
-  version "1.13.3"
+  version "1.13.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/navigacontentlab/panurge/releases/v1.13.3/panurge_darwin_arm64.tar.gz"
-      sha256 "ffa46ec866843769eeeaf78c92dcbbc6bb2d5b880bb38a415d96ee3235e031b9"
+      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.4/panurge_darwin_arm64.tar.gz"
+      sha256 "455afb4e028a970544a7cd15102b3fef46b9182495c860bcb9fbbd6d9e28b9e0"
 
       def install
         bin.install "panurge"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/navigacontentlab/panurge/releases/v1.13.3/panurge_darwin_amd64.tar.gz"
-      sha256 "9346a0308450c13d6643020d7946aa6c9244ae4f19fb2a43fc8bfe8c148b9f9e"
+      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.4/panurge_darwin_amd64.tar.gz"
+      sha256 "77886c62e46fffe87ce35e206d007dcb5440d8f129a6ca100f5db89d9de8d4cc"
 
       def install
         bin.install "panurge"
@@ -28,16 +28,16 @@ class Panurge < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/navigacontentlab/panurge/releases/v1.13.3/panurge_linux_amd64.tar.gz"
-      sha256 "882266946594d76526cebb7b55425e5e9ac2940207e223bdec3bf1f8709bc611"
+      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.4/panurge_linux_amd64.tar.gz"
+      sha256 "057ebcd70eabd1086a4b26e8fe23d74d764eea556e740b25ecf8ee170c7cb131"
 
       def install
         bin.install "panurge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/navigacontentlab/panurge/releases/v1.13.3/panurge_linux_arm64.tar.gz"
-      sha256 "c5b0be7784c91a97a627427f21096e5e4aa15ce5da3c0f63d803cad49ddd1eae"
+      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.4/panurge_linux_arm64.tar.gz"
+      sha256 "69d3dad321e5e088335904dc6f4690e2c8901f776976e2d1ba3b6e3c5247db5f"
 
       def install
         bin.install "panurge"
