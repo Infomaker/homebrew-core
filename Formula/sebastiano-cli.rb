@@ -5,42 +5,42 @@
 class SebastianoCli < Formula
   desc "A simple cli."
   homepage "https://bitbucket.org/infomaker/sebastiano-cli/"
-  version "0.0.1"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/infomaker/sebastiano-cli/releases/download/v0.0.1/pretty-printer_darwin_arm64.zip"
-      sha256 "7b07e5a591ab75a5c2401fe3744adb762f8926a7b4b6c6b25491b56b1f7522fd"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sebastiano-cli/0.0.3/sebastiano-cli_darwin_arm64.zip"
+      sha256 "25e956a524e5189c7103c638f83128343fe4156d1779b31e8bf80bcaf1d13016"
 
       def install
-        bin.install "pretty-printer"
+        bin.install "sebastiano-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infomaker/sebastiano-cli/releases/download/v0.0.1/pretty-printer_darwin_amd64.zip"
-      sha256 "beaf374463d4505aef7094764c1f1934a4b91b5e0a4fcccf0bdabd3145ca8c00"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sebastiano-cli/0.0.3/sebastiano-cli_darwin_amd64.zip"
+      sha256 "19491a52362ed2f0abced6327fd82f498dfb120ecbf7976cbc38ffed14d12df1"
 
       def install
-        bin.install "pretty-printer"
+        bin.install "sebastiano-cli"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/infomaker/sebastiano-cli/releases/download/v0.0.1/pretty-printer_linux_amd64.zip"
-      sha256 "818f093c5c3d36f1fdddac1730b34139563aa05da9a34bd6511d70e858321736"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sebastiano-cli/0.0.3/sebastiano-cli_linux_arm64.zip"
+      sha256 "bb8acffb04ff774cd71154c66669afe945017c0ee892a315e57fdd0fb252d0fd"
 
       def install
-        bin.install "pretty-printer"
+        bin.install "sebastiano-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infomaker/sebastiano-cli/releases/download/v0.0.1/pretty-printer_linux_arm64.zip"
-      sha256 "7454d43856ed0f77a702608f901c66665fb214f018870b6e5d5e816c94a1fd3f"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sebastiano-cli/0.0.3/sebastiano-cli_linux_amd64.zip"
+      sha256 "286b8458bea79705ffc9d4407d047673e398bb58fa79202c394c5eae14eebb8b"
 
       def install
-        bin.install "pretty-printer"
+        bin.install "sebastiano-cli"
       end
     end
   end
