@@ -5,20 +5,20 @@
 class Ciutils < Formula
   desc "Common CI workflows"
   homepage "https://bitbucket.org/infomaker/ciutils/"
-  version "0.9.4"
+  version "0.10.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.9.4/ciutils_darwin_arm64.tar.gz"
-      sha256 "841f2624d2c72252e2e59f0f8843ed1878348cbd398a92cae862a7384e52a27e"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.10.0/ciutils_darwin_arm64.tar.gz"
+      sha256 "85063a26199fbef373da607593a9a1ca9d71e5b7524154c40a0899c8f45880ed"
 
       def install
         bin.install "ciutils"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.9.4/ciutils_darwin_amd64.tar.gz"
-      sha256 "ddd453d736f4c99bdbc6d7c42a7baea3129bea51b418083bddbc50922018c7fa"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.10.0/ciutils_darwin_amd64.tar.gz"
+      sha256 "4c65afffc6277dc9e04cc80d0fbda10b3b3990909fe2d8b0b4df0bce1aaafaa6"
 
       def install
         bin.install "ciutils"
@@ -27,17 +27,17 @@ class Ciutils < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.9.4/ciutils_linux_arm64.tar.gz"
-      sha256 "5c67a337674684db3df314bab5c3a838f84474f16f0705b946ea147d033d3f14"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.10.0/ciutils_linux_amd64.tar.gz"
+      sha256 "310e8f38adb64ff0ab296dcffb0fb181ab542aa7287695aa1dafdd6f87a77b39"
 
       def install
         bin.install "ciutils"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.9.4/ciutils_linux_amd64.tar.gz"
-      sha256 "9b10bfbb0f4b39ad222fb4bbbae95c6c958e230f3102fb914dd2e64c878c4057"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.10.0/ciutils_linux_arm64.tar.gz"
+      sha256 "e5022571bd82e608ba96de388f5a853d494d2be70f7b41d7d760e620e23e5fcf"
 
       def install
         bin.install "ciutils"
