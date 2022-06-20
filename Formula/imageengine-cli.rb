@@ -5,18 +5,43 @@
 class ImageengineCli < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.3.0"
+  version "0.3.1"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.3.0/imageengine-cli_macOS_64-bit.zip"
-    sha256 "732cd0dbd32c572b6ad09b11b17b84280346292ae9ee2661e96532f935599b92"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.3.0/imageengine-cli_macOS_arm64.zip"
-    sha256 "e5189ab37640bf9f95bc0437b9cb86d551cead7b2a68dfa205d7163f968b8f07"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.3.1/imageengine-cli_darwin_arm64.zip"
+      sha256 "f10df275b3c33bef3dfe3a76b084737509cb25d6fa7ee3314caec143bba4da7b"
+
+      def install
+        bin.install "imageengine-cli"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.3.1/imageengine-cli_darwin_amd64.zip"
+      sha256 "351c0dd546eb89492a31554d7220bbea5c83026a1663074c3dd9b3fc01ab5521"
+
+      def install
+        bin.install "imageengine-cli"
+      end
+    end
   end
 
-  def install
-    bin.install "imageengine-cli"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.3.1/imageengine-cli_linux_arm64.zip"
+      sha256 "f3ec530ba4fbafb1c5829d36ed8b495a2d0cb0fd84c65d6f301f4001ca47cee5"
+
+      def install
+        bin.install "imageengine-cli"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/imageengine-cli/0.3.1/imageengine-cli_linux_amd64.zip"
+      sha256 "9e4dc28c4437e44a1ecebc962fe05c56048f66b569d3a482179c7f6c7488b6db"
+
+      def install
+        bin.install "imageengine-cli"
+      end
+    end
   end
 end
