@@ -5,20 +5,20 @@
 class SandraCli < Formula
   desc "A simple cli."
   homepage "https://bitbucket.org/infomaker/sandra-cli/"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sandra-cli/0.0.2/sandra-cli_darwin_arm64.zip"
-      sha256 "1ae4f5dbd200443cc67b098c30921695681941f67dd7f4240c405b18259deaf0"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sandra-cli/0.0.3/sandra-cli_darwin_amd64.zip"
+      sha256 "e2d718434f443611a73387d25ed2f943c8964e3b4b354f4cba4b9efc515a8167"
 
       def install
         bin.install "sandra-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sandra-cli/0.0.2/sandra-cli_darwin_amd64.zip"
-      sha256 "9faf94af3b39dad92613880f4e03793fa0acbc6cfe42be1802cd28f4bce3ff0e"
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sandra-cli/0.0.3/sandra-cli_darwin_arm64.zip"
+      sha256 "f74e1d091e1fde7a04145fdb8cb8df105160b6ebba53afde46e0a01ceee7bc1f"
 
       def install
         bin.install "sandra-cli"
@@ -28,16 +28,16 @@ class SandraCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sandra-cli/0.0.2/sandra-cli_linux_arm64.zip"
-      sha256 "88e14e12fd0d8ed49730e7ccb1b7a6ae269c64c0ebf39e0f54cba5752ede84e5"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sandra-cli/0.0.3/sandra-cli_linux_arm64.zip"
+      sha256 "b2cab520cc136fd60ecb9d6f86efc446e28657e88be3f262202fdb1808a9000a"
 
       def install
         bin.install "sandra-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sandra-cli/0.0.2/sandra-cli_linux_amd64.zip"
-      sha256 "78227f7e87e830fce15c6d1b116f2e429605ea66fe42e83271887506956b8a47"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/sandra-cli/0.0.3/sandra-cli_linux_amd64.zip"
+      sha256 "9f7383a8227ee07fdc264e13c28837d7da2c0f3303db040b70a677458ec38164"
 
       def install
         bin.install "sandra-cli"
