@@ -5,20 +5,20 @@
 class CcaDownloader < Formula
   desc "Downloads assets using CCA."
   homepage "https://bitbucket.org/infomaker/cca-downloader/"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/cca-downloader_darwin_amd64.zip"
-      sha256 "73dacec61672fa293f844550c845bf5b3009bf0fd7db4d7ea51b4e80039166a1"
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.2/cca-downloader_darwin_arm64.zip"
+      sha256 "662a19b1c40d0bfffb1aeb05291cfd32380ae65c64b599d31f7c7c7dc0f0e00c"
 
       def install
         bin.install "cca-downloader"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/cca-downloader_darwin_arm64.zip"
-      sha256 "386b4e2dddd120daf72de8a08bcd2e1020e5940da0a8466b917214f90277b537"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.2/cca-downloader_darwin_amd64.zip"
+      sha256 "3f12f2f72d5e5a9acdc3f4a28e2e3f8e5cb754497c22f42d08bc9add3f37f4a8"
 
       def install
         bin.install "cca-downloader"
@@ -27,17 +27,17 @@ class CcaDownloader < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/cca-downloader_linux_amd64.zip"
-      sha256 "9e2f83cddd147e44ffd4be97240b7caf90043608373ff470a37edae8a729ef62"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.2/cca-downloader_linux_arm64.zip"
+      sha256 "2d71cb5d467c76883fd2d9fe9f30a81b7dca88eb48acd9cb437c5f07db57a793"
 
       def install
         bin.install "cca-downloader"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.1/cca-downloader_linux_arm64.zip"
-      sha256 "c1df5946e8956f4b8e81e1b9d553d9f03542fe624ec8ba1c871f32b3d6a065c1"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/occonf/0.2.2/cca-downloader_linux_amd64.zip"
+      sha256 "e8de413ad8636b0c7fe1bd4ac56a0478ccd3f231edecf846d5fafdea50ae70b6"
 
       def install
         bin.install "cca-downloader"
