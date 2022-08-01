@@ -5,20 +5,20 @@
 class Panurge < Formula
   desc "Panurge utility"
   homepage "https://github.com/navigacontentlab/panurge"
-  version "1.13.5"
+  version "1.13.6"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.5/panurge_darwin_arm64.tar.gz"
-      sha256 "124f6c3af7cb9a8959f0293e037107be81a0382202ae07da635c81f965e04664"
+      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.6/panurge_darwin_arm64.tar.gz"
+      sha256 "764ffe3b56a712294cb6875a6750ad00ae1a9f053c8ac4cf530fe728eb812b9b"
 
       def install
         bin.install "panurge"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.5/panurge_darwin_amd64.tar.gz"
-      sha256 "a9a566b81ec03e983ad637a9353661ebb1143522888d13f18e855088b79e2b03"
+      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.6/panurge_darwin_amd64.tar.gz"
+      sha256 "61a2f820b965b9604d11a71006d2c681f99c1e514ff790a7e91013c52c550385"
 
       def install
         bin.install "panurge"
@@ -27,17 +27,17 @@ class Panurge < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.5/panurge_linux_arm64.tar.gz"
-      sha256 "58b4a3bd2912d91742a73c66b9dc4c82a01c02b5d8f25d2a86291597b99929de"
+    if Hardware::CPU.intel?
+      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.6/panurge_linux_amd64.tar.gz"
+      sha256 "09a95fdbbc4c65b460dbda2f1d2a5a1258dc4726ed9aa7e5a62a0f44a05d0af6"
 
       def install
         bin.install "panurge"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.5/panurge_linux_amd64.tar.gz"
-      sha256 "00fb9c92530aae0e88282c5ab1f5ba8440d7871cd3ff988b6c4b3fa0f7f7dd6f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/navigacontentlab/panurge/releases/download/v1.13.6/panurge_linux_arm64.tar.gz"
+      sha256 "6f0ed99b8a9d4edf757285933eda45547822363a41c9f4601be6201e6c7fa02c"
 
       def install
         bin.install "panurge"
