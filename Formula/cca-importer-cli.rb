@@ -5,13 +5,13 @@
 class CcaImporterCli < Formula
   desc "Handle CCA Importer info tasks."
   homepage "https://bitbucket.org/infomaker/cca-importer-info/"
-  version "0.0.14"
+  version "0.0.15"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-info/0.0.14/cca-importer-cli_darwin_arm64.zip"
-      sha256 "64351d0b243a6aacb1d49b445d66dcaccdfdac10f22d43f0e7413b16ab697652"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-info/0.0.15/cca-importer-cli_darwin_arm64.zip"
+      sha256 "5048aced6e8af2909d4fcd0dda593ec2f0dbe32708427e813a13347ca4bc0f3b"
 
       def install
         bin.install "cca-importer-cli"
@@ -21,8 +21,8 @@ class CcaImporterCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-info/0.0.14/cca-importer-cli_darwin_amd64.zip"
-      sha256 "adbf3d62f766002f1b09ce0827bad3c3ec407710188b1c9ce6d54b43d4ac9106"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/cca-importer-info/0.0.15/cca-importer-cli_darwin_amd64.zip"
+      sha256 "4345c1141eaa1b3ab10ae84be76a0f4d1b23910f142e3ebea84da649583fe33f"
 
       def install
         bin.install "cca-importer-cli"
