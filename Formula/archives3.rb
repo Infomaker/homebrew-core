@@ -5,20 +5,20 @@
 class Archives3 < Formula
   desc "Archive S3 is a POC for creating backup archives from a bucket."
   homepage "https://bitbucket.org/infomaker/archives3/"
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.4/archives3_darwin_arm64.zip"
-      sha256 "b8c1b91f55aec55d81ebe1295b5003615eed924053273c18bd5fcf1be47af1e0"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.5/archives3_darwin_arm64.zip"
+      sha256 "7be3dd52994fd56e0f445d80ff0adc7d8405c54d3fd61b1f71bb8b14cd2b5ab4"
 
       def install
         bin.install "archives3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.4/archives3_darwin_amd64.zip"
-      sha256 "325c49fdbd7db342fde396db6e97f7fe71f3210ef04f6cc1943e9a62d0afc7a5"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.5/archives3_darwin_amd64.zip"
+      sha256 "2e2e543528eaa2cc5954198bb80db85117f4caf20300dab25430060d9ae085f3"
 
       def install
         bin.install "archives3"
@@ -28,16 +28,16 @@ class Archives3 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.4/archives3_linux_arm64.zip"
-      sha256 "b4532c7a312718a871e23a00c001807c287c9415fc02e74d5da9ff2e83828959"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.5/archives3_linux_arm64.zip"
+      sha256 "8f860b5cf23c03979d654447d35c8ac60e69f4f61435a1a97b34aca65931fc83"
 
       def install
         bin.install "archives3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.4/archives3_linux_amd64.zip"
-      sha256 "76a2b1913efcf19eafa3cf937c7b65fc06238d985a367a71852450e708ae94a8"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/archives3/0.3.5/archives3_linux_amd64.zip"
+      sha256 "973d6eb9c00b224e341f78aa483c517bf43828b9030d27596e6bd355fad7e49a"
 
       def install
         bin.install "archives3"
