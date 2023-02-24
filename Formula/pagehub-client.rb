@@ -5,20 +5,20 @@
 class PagehubClient < Formula
   desc "Upload and download page publication files to Pagehub API."
   homepage "https://bitbucket.org/infomaker/pagehub-client/"
-  version "0.6.2"
+  version "0.6.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.6.2/pagehub-client_darwin_amd64.zip"
-      sha256 "a491fd64eb82dcb15ad9a19cee37219cd14c2bd433c5b91c08511848f75bb602"
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.6.3/pagehub-client_darwin_arm64.zip"
+      sha256 "01b22849004e8e9e8fbc1f0a5b86c0810d4f02b7c4ec684b4916c37fc080f12b"
 
       def install
         bin.install "pagehub-client"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.6.2/pagehub-client_darwin_arm64.zip"
-      sha256 "4c394683d7f89d01b932b85a20f6ab18515ee7d17936d9907e6ab3bd2d8829c6"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.6.3/pagehub-client_darwin_amd64.zip"
+      sha256 "64eca8ba0152e4eaf6f0d670ec77d65ae6bc44b8fddfa2c37d0cc311d80aebbb"
 
       def install
         bin.install "pagehub-client"
@@ -28,16 +28,16 @@ class PagehubClient < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.6.2/pagehub-client_linux_arm64.zip"
-      sha256 "e496d55ee843ddaf6f2eaeec10dac5d0167c01a6112584e87f1a21c6b62998cc"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.6.3/pagehub-client_linux_arm64.zip"
+      sha256 "f1e55a7fa20543366400dd86bc51c2e631823103576d843c909b734292d62a19"
 
       def install
         bin.install "pagehub-client"
       end
     end
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.6.2/pagehub-client_linux_amd64.zip"
-      sha256 "a3d111b49ebd2e4cbba7793ec71611f3fb832220f6eb2075656822de14de93a5"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.6.3/pagehub-client_linux_amd64.zip"
+      sha256 "01f77c1918cc8fda526966065593b201342b206fc637b768ddb0e3ce81e06573"
 
       def install
         bin.install "pagehub-client"
