@@ -10,7 +10,7 @@ class Panurge < Formula
   on_macos do
     on_intel do
       url "https://github.com/navigacontentlab/panurge/releases/download/v2.0.0/panurge_darwin_amd64.tar.gz"
-      sha256 "7bcc1e1520bd37219edcc01f400d17d9564cd391b68dcc06f04172a8fa36f520"
+      sha256 "1ab8285cffbe2f6a98dfce22d8d917d1a0f35a5e4dbb4295f148b8698da8cfd6"
 
       def install
         bin.install "panurge"
@@ -18,7 +18,7 @@ class Panurge < Formula
     end
     on_arm do
       url "https://github.com/navigacontentlab/panurge/releases/download/v2.0.0/panurge_darwin_arm64.tar.gz"
-      sha256 "b97b942786db7ee74459cef2f53916e2947a1a8f2e665fe768e84c8232d756af"
+      sha256 "329d6bdd88f6e7e3eb96be5219f1aa43755dd22c4401a7eebd9713cfb405f30e"
 
       def install
         bin.install "panurge"
@@ -30,7 +30,7 @@ class Panurge < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/navigacontentlab/panurge/releases/download/v2.0.0/panurge_linux_amd64.tar.gz"
-        sha256 "fa8c8147c186b13c1e05bdd7806a499f3ae28bea341d6b4921b4ba50877d9989"
+        sha256 "c57212138a11e5b9c807511423b3409aa295f005cf9b58cebc57d5f12857ff1c"
 
         def install
           bin.install "panurge"
@@ -40,7 +40,7 @@ class Panurge < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/navigacontentlab/panurge/releases/download/v2.0.0/panurge_linux_arm64.tar.gz"
-        sha256 "e9f9eecb9c8ef08e87590c16fc7d9a36c97a16e3fb6a8ad1e022c9bbec7a91e3"
+        sha256 "9ef9642b78e4a663b63743ad231d1faea485686c5ce7f55b97e6cd73cfce9da9"
 
         def install
           bin.install "panurge"
