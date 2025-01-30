@@ -5,20 +5,20 @@
 class BrewSecurityChecker < Formula
   desc "OpenContent CLI Tools"
   homepage "https://navigaglobal.com"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/brew-security-checker/0.0.6/brew-security-checker_macOS_64-bit.zip"
-      sha256 "0f0d567e25a00d45b6aad429eed7f6c71a47c007f5d31223ff62471781613690"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/brew-security-checker/0.0.7/brew-security-checker_macOS_64-bit.zip"
+      sha256 "0a5a3aff007c361a846c32372b4c2e91580445f8983b6d2a2b09490f3c14dada"
 
       def install
         bin.install "brew-security-checker"
       end
     end
     if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/brew-security-checker/0.0.6/brew-security-checker_macOS_arm64.zip"
-      sha256 "ff71ea451bbcf2446862809f7288575dbf4c05a9032eab1f3621df866c99e62c"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/brew-security-checker/0.0.7/brew-security-checker_macOS_arm64.zip"
+      sha256 "aaf18f3007705d79d2450bc7a54aebac830e0491b47455d8f3212d9ded067c8f"
 
       def install
         bin.install "brew-security-checker"
@@ -28,16 +28,16 @@ class BrewSecurityChecker < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/brew-security-checker/0.0.6/brew-security-checker_Tux_64-bit.zip"
-      sha256 "2a23af0d8089895345fe2322e0ef478b5412d0eb2eb4ca48f5c515243718b941"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/brew-security-checker/0.0.7/brew-security-checker_Tux_64-bit.zip"
+      sha256 "8330dbf5a9484e86da687ae9c1fa038f75e074cef7ac78100d26dca87279c4ad"
 
       def install
         bin.install "brew-security-checker"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/brew-security-checker/0.0.6/brew-security-checker_Tux_arm64.zip"
-      sha256 "11151ed8fcfa4702fc5f7b830388fcd9d51eb3c4232760e4d7d197f72866692f"
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/brew-security-checker/0.0.7/brew-security-checker_Tux_arm64.zip"
+      sha256 "0eabf1d8736feadea02a0c4692ea417da6558bb838afebd189b0ffae748b73d0"
 
       def install
         bin.install "brew-security-checker"
