@@ -8,17 +8,17 @@ class PagehubClient < Formula
   version "0.13.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.13.0/pagehub-client_darwin_amd64.zip"
-      sha256 "fdfb8ed6d9675df12916f778be9896b3638a9760d8f2254b075621dbb980b084"
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.13.0/pagehub-client_darwin_arm64.zip"
+      sha256 "fdf0d899ed58949109eddc8f11a11da311be1fb4869f69bc18afa1babda47c98"
 
       def install
         bin.install "pagehub-client"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.13.0/pagehub-client_darwin_arm64.zip"
-      sha256 "d56f94d7f9a6d6d683100c27bd3a8d6ca0eb8dcd4ebc341b18f07635984a847c"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.13.0/pagehub-client_darwin_amd64.zip"
+      sha256 "beda96fd14817c3a81c6044d3b7e89e4d31e37dce01c6d6fc2c1f0f237214cf8"
 
       def install
         bin.install "pagehub-client"
@@ -29,7 +29,7 @@ class PagehubClient < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.13.0/pagehub-client_linux_amd64.zip"
-      sha256 "db207a029ed6c11eeeef0d7065e68bdc0383dcce0025dc18963e2affc262abb4"
+      sha256 "72854b41e2309975b24586880988f816d187a73c14b0e10c11d7d7999c266c5f"
 
       def install
         bin.install "pagehub-client"
@@ -37,7 +37,7 @@ class PagehubClient < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/pagehub-client/0.13.0/pagehub-client_linux_arm64.zip"
-      sha256 "b0087e6dc54f9b9c00a119361d019d55b8f92ec074431d6cf02186480a9dd1a1"
+      sha256 "88028c6a250eb32a364c28038418df35a41c378b888b87a929534e07f31b11ec"
 
       def install
         bin.install "pagehub-client"
