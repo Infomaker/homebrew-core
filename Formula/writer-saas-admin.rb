@@ -10,7 +10,7 @@ class WriterSaasAdmin < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_darwin_amd64.zip"
-      sha256 "b3f6a30dffe473bc59d9bed7091f30cc3399de9628bf77e5f0ebfee0905bed52"
+      sha256 "b3a5c6e6ba5f3aa62ce9bcad47c6297cf0d240c30f533a2b9914f0652765b444"
 
       def install
         bin.install "writer-saas-admin"
@@ -18,7 +18,7 @@ class WriterSaasAdmin < Formula
     end
     if Hardware::CPU.arm?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_darwin_arm64.zip"
-      sha256 "4e56e76c81bf548f769caca68f0f54dc48fdc885ca5b66b480c76abb96de04fa"
+      sha256 "12d79e0176ae023b537ec8d7bc802b4a3c58e258133396219e9c8acf9244b8d4"
 
       def install
         bin.install "writer-saas-admin"
@@ -29,7 +29,7 @@ class WriterSaasAdmin < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_linux_amd64.zip"
-      sha256 "09d9cf60ae60c0835ad3f2f43f28205fe030571be1ffb642ed4cca1b35f6e7e8"
+      sha256 "e1086d83de4c2ad8d6fda37304583664d80c17500c60d26985f4611727f1c1a0"
 
       def install
         bin.install "writer-saas-admin"
@@ -37,7 +37,7 @@ class WriterSaasAdmin < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_linux_arm64.zip"
-      sha256 "687cdc22a44cfa9f76e03b44a4d9211a903f279fcbc50bfed7f12250b84243bf"
+      sha256 "0c4d64e8f1fc02739184b2d00fe2baab1ae41a674537be10666ef1c8e9299db5"
 
       def install
         bin.install "writer-saas-admin"
