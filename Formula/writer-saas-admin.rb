@@ -8,17 +8,17 @@ class WriterSaasAdmin < Formula
   version "1.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_darwin_amd64.zip"
-      sha256 "b3a5c6e6ba5f3aa62ce9bcad47c6297cf0d240c30f533a2b9914f0652765b444"
+    if Hardware::CPU.arm?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_darwin_arm64.zip"
+      sha256 "bc0555c8594be98988cd54e3c6ea584885e377149382cb1aafa8ad48c642920c"
 
       def install
         bin.install "writer-saas-admin"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_darwin_arm64.zip"
-      sha256 "12d79e0176ae023b537ec8d7bc802b4a3c58e258133396219e9c8acf9244b8d4"
+    if Hardware::CPU.intel?
+      url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_darwin_amd64.zip"
+      sha256 "a92ced144e2c503f5d06a59758c195e4d162b1958463ba581730bdcbd3827401"
 
       def install
         bin.install "writer-saas-admin"
@@ -29,7 +29,7 @@ class WriterSaasAdmin < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_linux_amd64.zip"
-      sha256 "e1086d83de4c2ad8d6fda37304583664d80c17500c60d26985f4611727f1c1a0"
+      sha256 "ef6039b73e6c3dd6b4f513dda1c5009cc98a08b9b917ee5d184f8eba64eb888a"
 
       def install
         bin.install "writer-saas-admin"
@@ -37,7 +37,7 @@ class WriterSaasAdmin < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/writer-saas-admin/1.5.0/writer-saas-admin_linux_arm64.zip"
-      sha256 "0c4d64e8f1fc02739184b2d00fe2baab1ae41a674537be10666ef1c8e9299db5"
+      sha256 "59523d0fcba015a9d74d076de97aa92334864d81e69c2d735e8e83c27090c5e3"
 
       def install
         bin.install "writer-saas-admin"
