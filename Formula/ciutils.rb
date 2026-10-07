@@ -10,7 +10,7 @@ class Ciutils < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.22.1-RC1/ciutils_darwin_amd64.tar.gz"
-      sha256 "ff00a80582237186f8e726617ee307962f9dc7ff037f9b3f148eec222454126d"
+      sha256 "379ec782380196a054dcafe1296b159ad78b7784196de636854fefcce12ce48a"
 
       def install
         bin.install "ciutils"
@@ -18,7 +18,7 @@ class Ciutils < Formula
     end
     if Hardware::CPU.arm?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.22.1-RC1/ciutils_darwin_arm64.tar.gz"
-      sha256 "d797aa4a22d029026a887901328107b189c15f02c6df3c2fb641a91d457e33d8"
+      sha256 "a5352bdfeaab1043dd7317c9a3ae94353440d68ac6d9d4d9e7c27e3eba03a284"
 
       def install
         bin.install "ciutils"
@@ -29,7 +29,7 @@ class Ciutils < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.22.1-RC1/ciutils_linux_amd64.tar.gz"
-      sha256 "71a17101b26539bb3c542e4801d4c7e0766da3fb92fe21ae2f2e8a4751603538"
+      sha256 "2e5067c3e2bb46a4d0bf1aee24b802f646a298275ab3b18d432e7f68e4c75133"
 
       def install
         bin.install "ciutils"
@@ -37,7 +37,7 @@ class Ciutils < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://im-saas-build-public-artifacts.s3-eu-west-1.amazonaws.com/tools/ciutils/0.22.1-RC1/ciutils_linux_arm64.tar.gz"
-      sha256 "bb462b2d1af90add6a6f53630e65d1aa8f35e9cd109d52b42348e7b4abfb48af"
+      sha256 "8138f01b9d7ff82d1dd1f01ad63543cf43db1a2ebc9628fe4696ebdf4ae3bc01"
 
       def install
         bin.install "ciutils"
